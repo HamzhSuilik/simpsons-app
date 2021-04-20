@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="section0">
+            <% array.forEach(item=>{ %>
+
+                <section class="section11">
+                    <h1><%= item.character %></h1>
+                    <p><%= item.quote %></p>
+                    <img src="<%= item.image %>" >
+    
+                    <form action="/details" method="post">
+                        <input hidden name="character" type="text" value="<%= item.character %>">
+                        <input hidden name="quote" type="text" value="<%= item.quote %>">
+                        <input hidden name="image" type="text" value="<%= item.image %>">
+                        <button type="submit" >Details</button>
+                    </form>
+                </section>
+    
+                <% }) %>
+        </section>
+    </main>
+</body>
+</html>
